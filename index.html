@@ -199,6 +199,57 @@ footer{
 </style>
 </head>
 
+<style>
+.research-card{
+  background:var(--panel);
+  border:1px solid var(--border);
+  padding:26px;
+  border-radius:6px;
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+
+.research-category{
+  font-size:0.75rem;
+  letter-spacing:.5px;
+  text-transform:uppercase;
+  color:var(--gold-soft);
+}
+
+.research-title{
+  font-family:var(--serif);
+  color:var(--gold);
+  font-size:1.2rem;
+}
+
+.research-meta{
+  font-size:0.85rem;
+  color:var(--muted);
+}
+
+.research-snippet{
+  font-size:0.95rem;
+  color:var(--muted);
+}
+
+.skill-tags{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin-top:10px;
+}
+
+.skill-tag{
+  font-size:0.7rem;
+  padding:4px 8px;
+  border:1px solid var(--border);
+  border-radius:20px;
+  color:var(--text);
+}
+</style>
+
+
 <body>
 
 <!-- BCI Disclaimer -->
@@ -292,6 +343,17 @@ footer{
       </p>
     </div>
 
+<section id="research">
+  <h2>Legal Research Highlights</h2>
+  <p style="max-width:700px;color:var(--muted)">
+    Curated extracts from academic work, internship research, and drafting exercises,
+    demonstrating structured case law analysis and ratio decidendi extraction.
+  </p>
+
+  <div id="researchGrid" class="grid"></div>
+</section>
+
+
     <div class="item">
       <div class="date">July 2024</div>
       <h3>Multiple Action Research Group (MARG)</h3>
@@ -309,6 +371,72 @@ footer{
     </div>
   </div>
 </section>
+
+<script>
+const researchData = [
+  {
+    "category": "Insolvency & Bankruptcy Code (IBC)",
+    "title": "The 'Clean Slate' Theory & Extinguishment of Claims",
+    "key_case": "Ghanashyam Mishra and Sons (P) Ltd. v. Edelweiss Asset Reconstruction Co. Ltd. (2021)",
+    "snippet": "Analyzed the Supreme Court’s ratio holding that once a Resolution Plan is approved, all prior claims including statutory dues stand extinguished, ensuring a genuine fresh start for the Corporate Debtor and preventing post-resolution claim ambush.",
+    "skills": ["Ratio Decidendi", "Statutory Interpretation", "Case Law Analysis"]
+  },
+  {
+    "category": "Constitutional Law & Gender Justice",
+    "title": "Decriminalization of Adultery",
+    "key_case": "Joseph Shine v. Union of India (2018)",
+    "snippet": "Critically examined Section 497 IPC as manifestly arbitrary, highlighting the Court’s shift from proprietary notions of marriage to constitutional recognition of sexual autonomy, dignity, and privacy under Articles 14 and 21.",
+    "skills": ["Constitutional Analysis", "Doctrinal Research", "Gender Justice"]
+  },
+  {
+    "category": "Criminal Law Reform",
+    "title": "Organized Crime under BNS",
+    "key_case": "Bharatiya Nyaya Sanhita, 2023 (Section 111)",
+    "snippet": "Mapped the statutory transition from fragmented state enactments to a unified definition of organized crime, analysing legislative intent and implications for centralised criminal prosecution.",
+    "skills": ["Comparative Statutes", "Legislative Intent", "Criminal Reform"]
+  },
+  {
+    "category": "Forensic Evidence",
+    "title": "DNA Evidence & Secondary Transfer",
+    "key_case": "R v. Tsekiri (UK CA)",
+    "snippet": "Examined judicial caution in relying on DNA evidence alone, emphasising the doctrine of secondary transfer and the need for corroborative circumstances to safeguard against wrongful convictions.",
+    "skills": ["Forensic Evidence", "Comparative Jurisprudence", "Evidence Law"]
+  },
+  {
+    "category": "Tax Litigation",
+    "title": "Reassessment & Natural Justice",
+    "key_case": "Thirukochi Motor Vehicle Owner’s Credit Society v. ITO",
+    "snippet": "Established that denial of a personal hearing under Section 148A when specifically requested violates principles of natural justice, rendering reassessment proceedings unsustainable.",
+    "skills": ["Procedural Law", "Writ Jurisdiction", "Tax Compliance"]
+  },
+  {
+    "category": "International Arbitration",
+    "title": "Seat vs Venue of Arbitration",
+    "key_case": "Lex Arbitri Doctrine",
+    "snippet": "Analysed the legal consequences of choosing a foreign seat with an Indian venue, particularly the exclusion of Part I of the Arbitration and Conciliation Act, 1996.",
+    "skills": ["Arbitration Clauses", "Cross-Border Disputes", "Contract Drafting"]
+  }
+];
+
+const grid = document.getElementById("researchGrid");
+
+researchData.forEach(item => {
+  const card = document.createElement("div");
+  card.className = "research-card";
+
+  card.innerHTML = `
+    <div class="research-category">${item.category}</div>
+    <div class="research-title">${item.title}</div>
+    <div class="research-meta"><strong>Key Reference:</strong> ${item.key_case}</div>
+    <div class="research-snippet">${item.snippet}</div>
+    <div class="skill-tags">
+      ${item.skills.map(s => `<span class="skill-tag">${s}</span>`).join("")}
+    </div>
+  `;
+
+  grid.appendChild(card);
+});
+</script>
 
 <section id="contact">
   <h2>Contact</h2>
