@@ -139,6 +139,55 @@ nav{
   margin-bottom:5px;
 }
 
+/* Research Cards */
+.research-card{
+  background:var(--panel);
+  border:1px solid var(--border);
+  padding:26px;
+  border-radius:6px;
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+
+.research-category{
+  font-size:0.75rem;
+  letter-spacing:.5px;
+  text-transform:uppercase;
+  color:var(--gold-soft);
+}
+
+.research-title{
+  font-family:var(--serif);
+  color:var(--gold);
+  font-size:1.2rem;
+}
+
+.research-meta{
+  font-size:0.85rem;
+  color:var(--muted);
+}
+
+.research-snippet{
+  font-size:0.95rem;
+  color:var(--muted);
+}
+
+.skill-tags{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin-top:10px;
+}
+
+.skill-tag{
+  font-size:0.7rem;
+  padding:4px 8px;
+  border:1px solid var(--border);
+  border-radius:20px;
+  color:var(--text);
+}
+
 /* Contact Form */
 form{
   max-width:520px;
@@ -198,57 +247,6 @@ footer{
 }
 </style>
 </head>
-
-<style>
-.research-card{
-  background:var(--panel);
-  border:1px solid var(--border);
-  padding:26px;
-  border-radius:6px;
-  display:flex;
-  flex-direction:column;
-  gap:12px;
-}
-
-.research-category{
-  font-size:0.75rem;
-  letter-spacing:.5px;
-  text-transform:uppercase;
-  color:var(--gold-soft);
-}
-
-.research-title{
-  font-family:var(--serif);
-  color:var(--gold);
-  font-size:1.2rem;
-}
-
-.research-meta{
-  font-size:0.85rem;
-  color:var(--muted);
-}
-
-.research-snippet{
-  font-size:0.95rem;
-  color:var(--muted);
-}
-
-.skill-tags{
-  display:flex;
-  flex-wrap:wrap;
-  gap:8px;
-  margin-top:10px;
-}
-
-.skill-tag{
-  font-size:0.7rem;
-  padding:4px 8px;
-  border:1px solid var(--border);
-  border-radius:20px;
-  color:var(--text);
-}
-</style>
-
 
 <body>
 
@@ -319,7 +317,7 @@ footer{
     <div class="card">
       <h3>Contract Drafting</h3>
       <p>
-        Drafting and redlining of Shareholders’ Agreements, service contracts, commercial clauses, and governance documents with case-law backed risk allocation.
+        Drafting and redlining of Shareholders' Agreements, service contracts, commercial clauses, and governance documents with case-law backed risk allocation.
       </p>
     </div>
     <div class="card">
@@ -343,17 +341,6 @@ footer{
       </p>
     </div>
 
-<section id="research">
-  <h2>Legal Research Highlights</h2>
-  <p style="max-width:700px;color:var(--muted)">
-    Curated extracts from academic work, internship research, and drafting exercises,
-    demonstrating structured case law analysis and ratio decidendi extraction.
-  </p>
-
-  <div id="researchGrid" class="grid"></div>
-</section>
-
-
     <div class="item">
       <div class="date">July 2024</div>
       <h3>Multiple Action Research Group (MARG)</h3>
@@ -372,192 +359,6 @@ footer{
   </div>
 </section>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Debaditya Dutta | Advocate</title>
-
-<style>
-:root{
-  --bg:#0f0f0f;
-  --panel:#1a1a1a;
-  --border:#2b2b2b;
-  --text:#e6e6e6;
-  --muted:#b5b5b5;
-  --gold:#c9a44c;
-  --gold-soft:#a88a3a;
-  --serif:"Georgia","Times New Roman",serif;
-  --sans:"Inter","Helvetica Neue",Arial,sans-serif;
-}
-
-*{box-sizing:border-box;margin:0;padding:0}
-
-body{
-  background:var(--bg);
-  color:var(--text);
-  font-family:var(--sans);
-  line-height:1.65;
-}
-
-.container{
-  max-width:1100px;
-  margin:auto;
-  padding:0 20px;
-}
-
-section{
-  padding:70px 0;
-  border-bottom:1px solid var(--border);
-}
-
-h1,h2,h3{
-  font-family:var(--serif);
-  color:var(--gold);
-  font-weight:500;
-}
-
-h1{font-size:3.2rem}
-h2{font-size:2.1rem;margin-bottom:25px}
-h3{font-size:1.25rem;margin-bottom:10px}
-
-p{color:var(--muted)}
-
-a{color:var(--gold);text-decoration:none}
-a:hover{color:var(--gold-soft)}
-
-nav{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:25px 0;
-}
-
-.nav-links a{
-  margin-left:24px;
-  font-size:0.85rem;
-  letter-spacing:1px;
-  text-transform:uppercase;
-}
-
-.hero{
-  min-height:75vh;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-}
-
-.hero p{
-  font-size:1.3rem;
-  max-width:720px;
-  margin-top:10px;
-}
-
-.hero-tag{
-  margin-top:18px;
-  padding-left:16px;
-  border-left:3px solid var(--gold);
-  font-weight:300;
-}
-
-.btn{
-  display:inline-block;
-  margin-top:30px;
-  padding:12px 26px;
-  background:var(--gold);
-  color:#000;
-  font-weight:600;
-  border-radius:4px;
-  border:none;
-  cursor:pointer;
-}
-
-.btn:hover{background:var(--gold-soft)}
-
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:30px;
-  margin-top:35px;
-}
-
-.timeline{max-width:760px}
-
-.item{
-  border-left:2px solid var(--gold);
-  padding-left:20px;
-  margin-bottom:35px;
-}
-
-.date{
-  font-size:0.85rem;
-  color:var(--gold);
-  margin-bottom:5px;
-}
-
-/* Research Cards */
-.research-card{
-  background:var(--panel);
-  border:1px solid var(--border);
-  padding:26px;
-  border-radius:6px;
-  display:flex;
-  flex-direction:column;
-  gap:12px;
-}
-
-.research-category{
-  font-size:0.75rem;
-  letter-spacing:.5px;
-  text-transform:uppercase;
-  color:var(--gold-soft);
-}
-
-.research-title{
-  font-family:var(--serif);
-  color:var(--gold);
-  font-size:1.2rem;
-}
-
-.research-meta{
-  font-size:0.85rem;
-  color:var(--muted);
-}
-
-.research-snippet{
-  font-size:0.95rem;
-  color:var(--muted);
-}
-
-.skill-tags{
-  display:flex;
-  flex-wrap:wrap;
-  gap:8px;
-  margin-top:10px;
-}
-
-.skill-tag{
-  font-size:0.7rem;
-  padding:4px 8px;
-  border:1px solid var(--border);
-  border-radius:20px;
-  color:var(--text);
-}
-
-footer{
-  text-align:center;
-  padding:45px 0;
-  font-size:0.8rem;
-  color:var(--muted);
-}
-</style>
-</head>
-
-<body>
-
-<div class="container">
-
 <section id="research">
   <h2>Legal Research Highlights</h2>
   <p style="max-width:700px;color:var(--muted)">
@@ -568,6 +369,37 @@ footer{
   <div id="researchGrid" class="grid"></div>
 </section>
 
+<section id="contact">
+  <h2>Contact</h2>
+  <p>
+    Vasundhara (near Sahibabad RRTS), Ghaziabad
+  </p>
+
+  <p style="margin-top:10px;color:var(--muted)">
+    Free initial consultation through the form below, for informational purposes only.
+  </p>
+
+  <form>
+    <input type="text" placeholder="Your Name" required>
+    <input type="email" placeholder="Your Email" required>
+    <textarea placeholder="Brief description of your query (no legal advice is provided at this stage)"></textarea>
+    <button type="submit" class="btn">Submit</button>
+  </form>
+
+  <p style="margin-top:14px;font-size:0.85rem;color:var(--muted)">
+    *Submission of this form does not create an advocate–client relationship and does not constitute legal advice.
+  </p>
+
+  <p style="margin-top:18px">
+    <a href="mailto:debadityadutta12@gmail.com">debadityadutta12@gmail.com</a>
+  </p> 
+  <p style="margin-top:8px">
+    <a href="https://www.linkedin.com/in/debaditya-dutta-419893210/" target="_blank">
+      LinkedIn Profile
+    </a>
+  </p>
+</section>
+
 <footer>
   © 2025 Debaditya Dutta · Advocate · Bar Council of Delhi
 </footer>
@@ -575,13 +407,17 @@ footer{
 </div>
 
 <script>
+function closeBCI(){
+  document.getElementById("bciModal").style.display="none";
+}
+
 const researchData = [
   {
     category: "Insolvency & Bankruptcy Code (IBC)",
     title: "The 'Clean Slate' Theory & Extinguishment of Claims",
     key_case: "Ghanashyam Mishra v. Edelweiss ARC (2021)",
     snippet:
-      "Analyzed the Supreme Court’s ratio that upon approval of a Resolution Plan, all prior claims including statutory dues stand extinguished, ensuring a genuine fresh start for the Corporate Debtor.",
+      "Analyzed the Supreme Court's ratio that upon approval of a Resolution Plan, all prior claims including statutory dues stand extinguished, ensuring a genuine fresh start for the Corporate Debtor.",
     skills: ["Ratio Decidendi", "Statutory Interpretation", "Case Law Analysis"]
   },
   {
@@ -589,7 +425,7 @@ const researchData = [
     title: "Decriminalization of Adultery",
     key_case: "Joseph Shine v. Union of India (2018)",
     snippet:
-      "Critically examined Section 497 IPC as manifestly arbitrary, highlighting the Court’s shift from proprietary notions of marriage to constitutional recognition of sexual autonomy, dignity, and privacy.",
+      "Critically examined Section 497 IPC as manifestly arbitrary, highlighting the Court's shift from proprietary notions of marriage to constitutional recognition of sexual autonomy, dignity, and privacy.",
     skills: ["Constitutional Analysis", "Doctrinal Research", "Gender Justice"]
   },
   {
@@ -644,54 +480,6 @@ researchData.forEach(item => {
 
   grid.appendChild(card);
 });
-</script>
-
-</body>
-</html>
-
-
-<section id="contact">
-  <h2>Contact</h2>
-  <p>
-    Vasundhara (near Sahibabad RRTS), Ghaziabad
-  </p>
-
-  <p style="margin-top:10px;color:var(--muted)">
-    Free initial consultation through the form below, for informational purposes only.
-  </p>
-
-  <form>
-    <input type="text" placeholder="Your Name" required>
-    <input type="email" placeholder="Your Email" required>
-    <textarea placeholder="Brief description of your query (no legal advice is provided at this stage)"></textarea>
-    <button type="submit" class="btn">Submit</button>
-  </form>
-
-  <p style="margin-top:14px;font-size:0.85rem;color:var(--muted)">
-    *Submission of this form does not create an advocate–client relationship and does not constitute legal advice.
-  </p>
-
-  <p style="margin-top:18px">
-    <a href="mailto:debadityadutta12@gmail.com">debadityadutta12@gmail.com</a>
-  </p> 
-<p style="margin-top:8px">
-    <a href="https://www.linkedin.com/in/debaditya-dutta-419893210/" target="_blank">
-      LinkedIn Profile
-    </a>
-  </p>
-</section>
-
-  
-<footer>
-  © 2025 Debaditya Dutta · Advocate · Bar Council of Delhi
-</footer>
-
-</div>
-
-<script>
-function closeBCI(){
-  document.getElementById("bciModal").style.display="none";
-}
 </script>
 
 </body>
