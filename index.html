@@ -26,10 +26,11 @@ body{
   font-family:var(--sans);
   line-height:1.65;
 }
-.site-logo{
-  height:56px;        /* main control */
-  width:auto;         /* keep proportions */
-  max-height:56px;
+.passport-photo{
+  height:90px;        /* passport-style height */
+  width:70px;         /* passport-style width */
+  object-fit:cover;  /* crops properly */
+  border-radius:4px; /* subtle, professional */
 }
 
 .container{
@@ -293,8 +294,8 @@ footer{
   </div>
   <a href="#contact" class="btn">Contact</a>
   <img src="https://debadityadutta12-ux.github.io/logo.jpeg"
-     alt="Debaditya Dutta Logo"
-     class="site-logo">
+     alt="Debaditya Dutta"
+     class="passport-photo">
 </section>
 
 <section id="about">
