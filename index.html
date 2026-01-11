@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Debaditya Dutta | Advocate</title>
+
+<style>
+:root{
+  --bg:#0f0f0f;
+  --panel:#1a1a1a;
+  --border:#2b2b2b;
+  --text:#e6e6e6;
+  --muted:#b5b5b5;
+  --gold:#c9a44c;
+  --gold-soft:#a88a3a;
+  --serif:"Georgia","Times New Roman",serif;
+  --sans:"Inter","Helvetica Neue",Arial,sans-serif;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+
+body{
+  background:var(--bg);
+  color:var(--text);
+  font-family:var(--sans);
+  line-height:1.65;
+}
+
+.container{
+  max-width:1100px;
+  margin:auto;
+  padding:0 20px;
+}
+
+section{
+  padding:70px 0;
+  border-bottom:1px solid var(--border);
+}
+
+h1,h2,h3{
+  font-family:var(--serif);
+  color:var(--gold);
+  font-weight:500;
+}
+
+h1{font-size:3.2rem}
+h2{font-size:2.1rem;margin-bottom:25px}
+h3{font-size:1.25rem;margin-bottom:10px}
+
+p{color:var(--muted)}
+
+a{
+  color:var(--gold);
+  text-decoration:none;
+}
+
+a:hover{color:var(--gold-soft)}
+
+nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:25px 0;
+}
+
+.nav-links a{
+  margin-left:24px;
+  font-size:0.85rem;
+  letter-spacing:1px;
+  text-transform:uppercase;
+}
+
+.hero{
+  min-height:75vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+
+.hero p{
+  font-size:1.3rem;
+  max-width:700px;
+  margin-top:10px;
+}
+
+.hero-tag{
+  margin-top:18px;
+  padding-left:16px;
+  border-left:3px solid var(--gold);
+  font-weight:300;
+}
+
+.btn{
+  display:inline-block;
+  margin-top:30px;
+  padding:12px 26px;
+  background:var(--gold);
+  color:#000;
+  font-weight:600;
+  border-radius:4px;
+}
+
+.btn:hover{background:var(--gold-soft)}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:30px;
+  margin-top:35px;
+}
+
+.card{
+  background:var(--panel);
+  border:1px solid var(--border);
+  padding:28px;
+  border-radius:6px;
+}
+
+.card:hover{
+  border-color:var(--gold);
+}
+
+.timeline{
+  max-width:750px;
+}
+
+.item{
+  border-left:2px solid var(--gold);
+  padding-left:20px;
+  margin-bottom:35px;
+}
+
+.date{
+  font-size:0.85rem;
+  color:var(--gold);
+  margin-bottom:5px;
+}
+
+footer{
+  text-align:center;
+  padding:45px 0;
+  font-size:0.8rem;
+  color:var(--muted);
+}
+
+/* Modal */
+.overlay{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.95);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  z-index:999;
+}
+
+.modal{
+  background:var(--panel);
+  border:1px solid var(--gold);
+  max-width:620px;
+  padding:40px;
+  text-align:center;
+}
+
+.modal ul{
+  text-align:left;
+  margin:20px 0;
+  padding-left:18px;
+  font-size:0.9rem;
+  color:var(--muted);
+}
+
+@media(max-width:768px){
+  h1{font-size:2.4rem}
+  .nav-links{display:none}
+}
+</style>
+</head>
+
+<body>
+
+<!-- Disclaimer -->
+<div id="bciModal" class="overlay">
+  <div class="modal">
+    <h2>Disclaimer</h2>
+    <p>
+      In accordance with the Bar Council of India Rules, advocates are not permitted to advertise or solicit work.
+    </p>
+    <ul>
+      <li>The visitor seeks information for personal use.</li>
+      <li>No solicitation or inducement is intended.</li>
+      <li>Content does not constitute legal advice.</li>
+    </ul>
+    <button class="btn" onclick="closeBCI()">I Agree</button>
+  </div>
+</div>
+
+<div class="container">
+
+<nav>
+  <div style="font-weight:600;letter-spacing:1px;color:var(--gold)">
+    DEBADITYA DUTTA
+  </div>
+  <div class="nav-links">
+    <a href="#about">About</a>
+    <a href="#practice">Practice</a>
+    <a href="#experience">Experience</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <h1>Debaditya Dutta</h1>
+  <p>Advocate | Litigation & Corporate Advisory</p>
+  <div class="hero-tag">
+    Tech-enabled legal research · Precision drafting · Regulatory focus
+  </div>
+  <a href="#contact" class="btn">Contact</a>
+</section>
+
+<section id="about">
+  <h2>About</h2>
+  <p>
+    Advocate enrolled with the Bar Council of Delhi (2025).  
+    B.A. LL.B. (Hons.), GGSIPU.  
+    Elite + Silver certification in <em>Artificial Intelligence, Law and Justice</em> (NPTEL – IIT Madras).
+  </p>
+  <br>
+  <p>
+    Practice driven by doctrinal clarity, litigation readiness, and technology-assisted legal research to reduce risk and inefficiency.
+  </p>
+</section>
+
+<section id="practice">
+  <h2>Practice Areas</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Commercial Litigation</h3>
+      <p>
+        Insolvency & Bankruptcy Code matters including Section 66,  
+        Negotiable Instruments Act Section 138 proceedings,  
+        procedural filings and affidavits.
+      </p>
+    </div>
+    <div class="card">
+      <h3>Corporate Drafting</h3>
+      <p>
+        Shareholders’ Agreements, service contracts, redlining,
+        Articles of Association updates, and compliance-oriented drafting.
+      </p>
+    </div>
+    <div class="card">
+      <h3>Tax & Regulatory</h3>
+      <p>
+        Income Tax reassessment notices (Section 148),
+        structured replies to show cause notices,
+        RTI-based compliance audits.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <h2>Experience</h2>
+  <div class="timeline">
+    <div class="item">
+      <div class="date">Jan 2025 – Mar 2025</div>
+      <h3>Vishal Agarwal & Associates</h3>
+      <p>
+        Litigation support in IBC, NI Act and tax matters.  
+        Drafted complaints, affidavits, and handled e-filing on NCLT and High Court portals.
+      </p>
+    </div>
+
+    <div class="item">
+      <div class="date">July 2024</div>
+      <h3>Multiple Action Research Group (MARG)</h3>
+      <p>
+        Comparative legislative research on BNS and IPC, with focus on organised crime and legislative intent.
+      </p>
+    </div>
+
+    <div class="item">
+      <div class="date">Jun 2022 – Jul 2022</div>
+      <h3>Consumers India</h3>
+      <p>
+        Regulatory audits through RTI, misleading advertisement analysis, and compliance reporting.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <p>New Delhi · NCR</p>
+  <p style="margin-top:15px">
+    <a href="mailto:debadityadutta12@gmail.com">debadityadutta12@gmail.com</a>
+  </p>
+  <p style="margin-top:8px">
+    <a href="https://www.linkedin.com/in/debaditya-dutta-419893210/" target="_blank">
+      LinkedIn Profile
+    </a>
+  </p>
+</section>
+
+<footer>
+  © 2025 Debaditya Dutta · Advocate · Bar Council of Delhi
+</footer>
+
+</div>
+
+<script>
+function closeBCI(){
+  document.getElementById("bciModal").style.display="none";
+}
+</script>
+
+</body>
+</html>
